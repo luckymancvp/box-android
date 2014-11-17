@@ -43,7 +43,10 @@ default-build:
               name: run gradle
               code: |
                 gradle --full-stacktrace -q --project-cache-dir=$WERCKER_CACHE_DIR build
+env:
+  ANDROID_SDK_VERSION: "20"
 script: |
+  sdk_version="23"
   profile="/etc/environment"
 
   # Start with a clean profile
@@ -62,7 +65,7 @@ script: |
   source $WERCKER_SOURCE_DIR/install-sdk.sh
   source $WERCKER_SOURCE_DIR/update-sdk.sh
 
-  export GRADLE_VERSION=2.1
+  export GRADLE_VERSION=1.12
   # install graddle
   source $WERCKER_SOURCE_DIR/install-gradle.sh
 
