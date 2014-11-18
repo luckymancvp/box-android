@@ -1,6 +1,6 @@
 set timeout -1;
 
-spawn android update sdk -a -u -f --filter [lindex $argv 0]
+spawn android update sdk -a -u -f
 expect {
     "Do you accept the license" { exp_send "y\r" ; exp_continue }
     eof

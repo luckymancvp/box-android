@@ -4,5 +4,8 @@ export ANDROID_UPDATE_FILTER="`tr '\n' ',' <$WERCKER_SOURCE_DIR/filter.list`"
 echo "export ANDROID_UPDATE_FILTER=\"${ANDROID_UPDATE_FILTER}\"" | sudo tee -a $profile
 
 # echo list sdk
+echo "List SDK available "
 android list sdk
-expect -f /pipeline/build/android-update-all.exp "$ANDROID_UPDATE_FILTER"
+echo "Start SDK update "
+expect -f /pipeline/build/android-update-all.exp
+echo "Finish SDK update"
