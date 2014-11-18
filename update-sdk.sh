@@ -6,3 +6,4 @@ echo "export ANDROID_UPDATE_FILTER=\"${ANDROID_UPDATE_FILTER}\"" | sudo tee -a $
 # echo list sdk
 android list sdk
 expect -f /pipeline/build/android-update.exp "$ANDROID_UPDATE_FILTER"
+expect -f /pipeline/build/android-update.exp "android-20"
