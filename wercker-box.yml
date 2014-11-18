@@ -46,7 +46,7 @@ default-build:
 env:
   ANDROID_SDK_VERSION: "20"
 script: |
-  sdk_version="23"
+  sdk_version="20"
   profile="/etc/environment"
 
   # Start with a clean profile
