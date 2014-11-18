@@ -7,5 +7,5 @@ echo "export ANDROID_UPDATE_FILTER=\"${ANDROID_UPDATE_FILTER}\"" | sudo tee -a $
 echo "List SDK available "
 android list sdk
 echo "Start SDK update "
-expect -f /pipeline/build/android-update-all.exp
+expect -f /pipeline/build/android-update.exp
 echo "Finish SDK update"
